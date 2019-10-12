@@ -1,13 +1,14 @@
 package org.smartapp.smartapptesting;
 
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class HelloWorldTest {
 
     @Test
     public void testHello() {
         HelloWorld helloWorld = new HelloWorld();
-        assert("Hello World".equals(helloWorld.getHello()));
+        assertEquals("Hello World", helloWorld.getHello());
     }
 }
