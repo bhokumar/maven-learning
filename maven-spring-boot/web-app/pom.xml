@@ -79,6 +79,13 @@
     </dependencies>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>io.packagecloud.maven.wagon</groupId>
+                <artifactId>maven-packagecloud-wagon</artifactId>
+                <version>0.0.6</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -115,5 +122,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>packagecloud.releases</id>
+            <url>packagecloud+https://packagecloud.io/bhoopendra/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>packagecloud.snapshots</id>
+            <url>packagecloud+https://packagecloud.io/bhoopendra/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
