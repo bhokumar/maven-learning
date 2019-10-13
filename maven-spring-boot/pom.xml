@@ -23,6 +23,7 @@
 		<java.version>11</java.version>
 	</properties>
 
+	<!--
 	<repositories>
 		<repository>
 			<id>nexus-snapshot</id>
@@ -32,11 +33,22 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	-->
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshot</id>
-			<url>http://localhost:8081/repository/nexus-snapshot/</url>
-		</snapshotRepository>
-	</distributionManagement>
+
+
+	<profiles>
+		<profile>
+			<id>nexus.release</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>nexus-snapshot</id>
+					<url>http://localhost:8081/repository/nexus-snapshot/</url>
+				</snapshotRepository>
+			</distributionManagement>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 </project>
