@@ -122,16 +122,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>packagecloud.releases</id>
-            <url>packagecloud+https://packagecloud.io/bhoopendra/release</url>
-        </repository>
-        <snapshotRepository>
-            <id>packagecloud.snapshots</id>
-            <url>packagecloud+https://packagecloud.io/bhoopendra/snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>
